@@ -1,5 +1,5 @@
-import React from "react";
-import TopNav from "./partials/TopNav";
+import React, { useEffect } from "react";
+import TopNav from "./partials/Topnav";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "./partials/Dropdown";
 import axios from "../utils/axios";
@@ -42,7 +42,7 @@ function Movies() {
     }
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
     refreshHandler();
   }, [category]);
 
