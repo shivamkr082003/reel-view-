@@ -19,7 +19,7 @@ function Header({ data }) {
       </h1>
       <p className="w-[70%] text-white mt-3 mb-3">
         {data.overview.slice(0, 200) || data.biography}..
-        <Link className="text-blue-400">
+        <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400">
           More
         </Link>
       </p>
@@ -29,7 +29,7 @@ function Header({ data }) {
         <i className="text-yellow-500 ri-album-fill ml-5"></i>
         {data.media_type.toUpperCase()}
       </p>
-      <Link  className=" mt-5  text-white ">
+      <Link to={`/${data.media_type}/details/${data.id}/trailer`} className=" mt-5  text-white ">
         <span className=" p-3 rounded bg-[#6556CD]"> <i className="ri-play-fill"></i> Watch Now</span>
       </Link>
     </div>
